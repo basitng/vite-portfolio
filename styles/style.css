@@ -1,0 +1,323 @@
+@import url("./default.css");
+@import url("./variable.css");
+@import url("./portfolio.css");
+@import url("./footer.css");
+@import url("./responsive.css");
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden !important;
+}
+nav {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  z-index: 1;
+  width: 100%;
+  padding: 15px 40px;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+nav img {
+  width: 150px;
+}
+nav .circle {
+  position: absolute;
+  top: -300%;
+  left: 50%;
+  transform: var(--translate);
+  z-index: 10;
+}
+.svg {
+  width: 200px;
+  height: 180px;
+  background-color: var(--theme1);
+  border-radius: 50%;
+}
+.main-menu {
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, var(--theme1), var(--theme2));
+  z-index: 3;
+  display: grid;
+  place-content: center;
+}
+.main-menu a {
+  font-size: calc(var(--font) * 3);
+  color: #fff;
+  text-decoration: none;
+  line-height: 4rem;
+}
+.main-menu .menu-close {
+  width: 80px;
+  cursor: pointer;
+  height: 80px;
+  background-color: var(--theme1);
+  border-radius: 50%;
+  padding: 20px;
+  display: grid;
+  place-content: center;
+  text-align: center;
+}
+.menu-close div {
+  width: 2rem;
+  height: 0.2rem;
+  border-radius: 10px;
+  background: #fff;
+}
+.menu-close div:nth-child(1) {
+  transform: rotate(45deg);
+}
+.menu-close div:nth-child(2) {
+  transform: rotate(-45deg);
+}
+.banner .fixed-blocks {
+  position: absolute;
+  width: 200px;
+  right: 0;
+  top: -40%;
+  height: calc(100vh + 40vh);
+  z-index: 2;
+  display: flex;
+}
+.banner .fixed-blocks div {
+  height: (100vh + 40vh);
+  width: calc(200px / 2);
+}
+.banner .fixed-blocks div:nth-child(1) {
+  background: var(--theme2);
+  z-index: -1;
+  position: relative;
+}
+.banner .fixed-blocks div:nth-child(1) h1 {
+  font-size: calc(var(--font) * 3);
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: var(--translate) rotate(90deg);
+  width: 400px;
+  -webkit-text-stroke: 2px black;
+  color: transparent;
+  display: block;
+  font-family: "header";
+  text-transform: uppercase;
+}
+.banner .fixed-blocks div:nth-child(2) {
+  background: var(--theme1);
+}
+.menu-block {
+  position: relative;
+}
+.banner .fixed-blocks .menu-block .menu {
+  cursor: pointer;
+  position: fixed;
+  background: var(--theme1);
+  width: 80px;
+  height: 80px;
+  z-index: 2;
+  border-radius: 50%;
+  right: 0%;
+  transform: var(--translate);
+  top: 0%;
+  display: grid;
+  place-content: center;
+}
+.banner .fixed-blocks .menu-block .menu div {
+  width: 2rem;
+  height: 0.2rem;
+  border-radius: 20px;
+  background: #fff;
+  margin: 2px;
+}
+.banner {
+  width: 100%;
+  height: 100vh;
+  background: #fff;
+  position: relative;
+}
+
+.banner > .caption {
+  position: absolute;
+  z-index: 1;
+  transform: var(--translate);
+  top: 10%;
+  left: 51.5%;
+  width: 100%;
+  padding-left: 2rem;
+}
+.caption h1 {
+  font-size: calc(var(--font) * 3);
+  font-weight: 800;
+  font-family: "header";
+  text-transform: uppercase;
+}
+
+.caption .p-block {
+  margin-top: 1rem;
+}
+.caption button {
+  display: flex;
+  cursor: pointer;
+  width: 200px;
+  padding: 20px 10px;
+  border-radius: 48px;
+  border: none;
+  outline: none;
+  height: 60px;
+  align-items: center;
+  background-color: var(--theme2);
+  margin-top: 2rem;
+}
+.caption button div {
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  display: grid;
+  border-radius: 50%;
+  padding: 25px;
+  place-content: center;
+}
+.caption button div img {
+  width: 30px;
+}
+.caption button span {
+  padding-left: 0.3rem;
+  font-size: calc(var(--font) * 1.2);
+}
+
+.social-block {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 5%;
+  left: 2%;
+}
+
+.social-block svg {
+  width: 30px;
+  margin: 10px;
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
+}
+.social-block svg:hover {
+  transform: translateY(-12px);
+}
+.container {
+  width: 100%;
+  height: auto;
+}
+.about-container {
+  padding: 200px 50px;
+  background: #212121;
+}
+.row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.about-container p {
+  color: #fff;
+  font-size: calc(var(--font) * 3);
+}
+.about-container h1 {
+  font-size: calc(var(--font) * 7);
+  color: #fff;
+}
+.about-container img {
+  width: 100%;
+}
+
+.about-container .icons {
+  display: flex;
+  padding-top: 3rem;
+}
+.icons img {
+  margin: 10px;
+  width: 50px;
+}
+.offset {
+  /* float: right; */
+  margin-top: 4rem;
+  width: 100%;
+  padding: 50px;
+  /* margin-left: 4rem; */
+}
+.offset h3 {
+  font-size: calc(var(--font) * 3);
+  color: #fff;
+  line-height: 4rem;
+}
+.work {
+  margin-top: 7rem;
+}
+.work p {
+  font-size: 2rem;
+}
+.work h3 {
+  font-size: calc(var(--font) * 2);
+  color: #fff;
+  padding-left: 17rem;
+}
+.client {
+  margin-top: 7rem;
+}
+.client h3 {
+  font-size: calc(var(--font) * 2);
+  color: #fff;
+  padding-left: 1rem;
+}
+.client p {
+  font-size: 2rem;
+}
+.clients {
+  margin-top: 7rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.clients .card {
+  background-color: #373636;
+  margin: 10px;
+  padding: 10px;
+  display: grid;
+  place-content: center;
+  border-radius: 10px;
+  height: 25vh;
+  cursor: pointer;
+  position: relative;
+}
+.clients .card::before {
+  content: attr(data-role);
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  place-content: center;
+  font-size: 2.6rem;
+  opacity: 0.9;
+  color: transparent;
+  -webkit-text-stroke: 1px #fff;
+  z-index: 10;
+  border-radius: 10px;
+  background-color: var(--theme1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  clip-path: circle(0px);
+  transition: 800ms ease-in-out;
+}
+.clients .card:hover::before {
+  clip-path: circle(400px);
+}
+.clients .card h1 {
+  font-size: 3.5rem;
+}

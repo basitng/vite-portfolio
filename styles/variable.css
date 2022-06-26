@@ -1,0 +1,10 @@
+:root {
+  --theme1: #f23456;
+  --theme2: #f6b718;
+  --theme3: #1e8e3e;
+  --translate: translate(-50%, 50%);
+  --w: 100%;
+  --h: 100vh;
+  --pd: 10px;
+  --font: 16px;
+}

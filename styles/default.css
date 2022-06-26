@@ -1,0 +1,34 @@
+@import url("./variable.css");
+@font-face {
+  font-family: "vite";
+  src: url("/fonts/3514FF-Bold.woff2");
+}
+@font-face {
+  font-family: "header";
+  src: url("/fonts/Montserrate/Montserrat-ExtraBold.ttf");
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* outline: 3px solid green; */
+}
+html,
+body {
+  overflow-x: hidden !important;
+  font-family: "vite";
+  font-size: var(--font);
+}
+.h1-block,
+.p-block,
+.button-block,
+.social-block,
+.main-menu,
+.offset,
+.client,
+.work,
+.clients,
+.col,
+.row {
+  overflow: hidden;
+}

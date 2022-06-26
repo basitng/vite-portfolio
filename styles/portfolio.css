@@ -1,0 +1,66 @@
+.portfolio-container {
+  padding: 200px 50px;
+}
+.section .col:nth-child(1) {
+  padding-bottom: 100px;
+  display: grid;
+  place-content: center;
+  text-align: center;
+}
+.section .col h1 {
+  text-transform: capitalize;
+  font-size: calc(var(--font) * 4);
+}
+.section .col p {
+  font-size: calc(var(--font) * 2);
+  color: #212121;
+  margin-top: -1rem;
+}
+.portfolio-container img {
+  width: 100%;
+}
+.portfolio-container :is(.portfolio-card, .portfolio-card-2) {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  position: relative;
+  margin-bottom: 10rem;
+}
+.portfolio-card .number h1 {
+  font-size: calc(var(--font) * 12);
+  margin-left: -7rem;
+
+  color: var(--theme1);
+  z-index: -1;
+  position: relative;
+}
+.portfolio-card .content {
+  margin-top: -8rem;
+  padding-left: 1rem;
+}
+.portfolio-card .content .h1 h1 {
+  font-size: calc(var(--font) * 3);
+  color: #333;
+}
+.portfolio-card .content p {
+  font-size: calc(var(--font) * 2);
+}
+
+.portfolio-card-2 .number h1 {
+  font-size: calc(var(--font) * 12);
+  margin-left: 0rem;
+  margin-bottom: -3rem;
+  color: var(--theme1);
+  z-index: -1;
+  position: relative;
+}
+.portfolio-card-2 .content {
+  margin-top: -8rem;
+  padding-left: 1rem;
+}
+.portfolio-card-2 .content .h1 h1 {
+  font-size: calc(var(--font) * 3);
+  color: #333;
+}
+.portfolio-card-2 .content p {
+  font-size: calc(var(--font) * 2);
+}
