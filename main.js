@@ -2,6 +2,7 @@ import { gsap } from "gsap";
 import { TextPlugin } from "gsap/all";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import locomotiveScroll from "locomotive-scroll";
+import "locomotive-scroll/dist/locomotive-scroll.css";
 window.addEventListener("DOMContentLoaded", runApp());
 
 function runApp() {
