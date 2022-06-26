@@ -38,33 +38,46 @@ function runApp() {
   const openMenu = document.querySelector("[data-menu-open]");
   const sideBar = document.querySelector("[data-sidebar]");
 
+  const menuTimeline = gsap.timeline();
+  menuTimeline.pause();
+  menuTimeline
+    .fromTo(
+      ".main-menu",
+      {
+        opacity: 0,
+        visibility: "hidden",
+        clipPath: "circle(0%)",
+      },
+      {
+        opacity: 1,
+        visibility: "visible",
+        duration: 2,
+        ease: "power2",
+        clipPath: "circle(100%)",
+      }
+    )
+    .fromTo(
+      ".main-menu a",
+      { x: "-100%", opacity: 0 },
+      {
+        x: 0,
+        opacity: 1,
+        duration: 1,
+        stagger: 0.5,
+      }
+    )
+    .fromTo(
+      ".main-menu .menu-close",
+      { y: "100px", opacity: 0 },
+      { y: 0, opacity: 1, duration: 1, ease: "bounce", stagger: 0.5 }
+    );
+
   openMenu.addEventListener("click", () => {
     console.log("opened");
-    const tl = gsap.timeline();
-    tl.fromTo(
-      ".main-menu",
-      { x: "-100%", opacity: 0 },
-      { x: 0, opacity: 1, duration: 1, visibility: "visible" }
-    )
-      .fromTo(
-        ".main-menu a",
-        { x: "-100%", opacity: 0 },
-        { x: 0, opacity: 1, duration: 1, ease: "slowMo", stagger: 0.5 }
-      )
-      .fromTo(
-        ".main-menu .menu-close",
-        { y: "100px", opacity: 0 },
-        { y: 0, opacity: 1, duration: 1, ease: "bounce", stagger: 0.5 }
-      );
+    menuTimeline.play();
   });
 
-  closeMenu.addEventListener("click", () => {
-    gsap.to({
-      x: 0,
-      opacity: 0,
-      visibility: "hidden",
-    });
-  });
+  closeMenu.addEventListener("click", () => {});
 
   const tl = gsap.timeline();
   tl.fromTo(
