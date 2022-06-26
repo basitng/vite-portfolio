@@ -11,7 +11,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  outline: 3px solid green;
+  /* outline: 3px solid green; */
 }
 html,
 body {
